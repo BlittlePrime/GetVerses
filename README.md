@@ -11,7 +11,7 @@ open the command line
 From the GetVerses/GetVerses folder where the GetVerses.csproj file resides simply type "dotnet run"
 
 (note: if you get the message "It was not possible to find any installed .NET Core SDKs" then you will need to install it from here
- https://dotnet.microsoft.com/download  either 5.0 or 3.1 should work)
+ https://dotnet.microsoft.com/download/dotnet/thank-you/sdk-3.1.407-windows-x64-installer)
 
 Using Chrome go to localhost:5001
 
