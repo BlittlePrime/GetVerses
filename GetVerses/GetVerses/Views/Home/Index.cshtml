@@ -1,0 +1,119 @@
+﻿@model VerseModel
+
+@section Styles {
+    
+    <style>
+        img {
+            width:300px;
+        }
+    </style>
+} 
+
+@{
+    ViewData["Title"] = "Verse of The Day";
+}
+
+<br />
+@Html.ActionLink("My Favorites", "MyFavorites")
+
+@using(Html.BeginForm())
+{
+    <div class="text-center">
+        <h1 class="display-4">@ViewData["Title"]</h1>
+        <div class="form-group">
+            <div class="col-sm-12">
+                <label>@Html.DisplayNameFor(Model => Model.startdate)</label>
+            </div>
+            <div class="col-sm-12">
+                @Html.EditorFor(model => model.startdate, new { htmlAttributes = new { @type = "text", @id = "datepicker", @class = "form-control datepicker", @placeholder = "MM/DD/YYYY" } })
+                @Html.ValidationMessageFor(model => model.startdate, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="form-group col-sm-12">
+                <div class="col-sm-12">
+                    <label>@Html.DisplayNameFor(Model => Model.PageSize)</label>
+                </div>
+                <div class="col-sm-12">
+                    <input asp-for="PageSize" class="form-control" />
+                    @Html.ValidationMessageFor(model => model.PageSize, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+        @if(Model.verses != null && Model.verses.Count > 0)
+        {
+            <table>
+                <thead>
+                    <tr>
+                        <th>
+                        @Html.DisplayNameFor(Model => Model.verses[0].verseText)
+                        </th>
+                        <th>
+                        @Html.DisplayNameFor(Model => Model.verses[0].verseImage)
+                        </th>
+                        <th></th>
+                </thead>
+                <tbody>
+                    @for(int row = 0; row < Model.verses.Count; ++row)
+                    {
+                        <tr>
+                            <td>
+                                <label id="verse_@row" value="@Model.verses[row].verseText">@Model.verses[row].verseText</label>
+                            </td>
+                            <td>
+                                <img id="image_@row" src="@Model.verses[row].verseImage"  />
+                            </td>
+                            <td>
+                                <button id="favorite_@row" class="is-favorite btn btn-primary" row="@row" value="@Model.verses[row].id">Favorite</button>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+    </div>
+}
+
+@section Scripts
+{
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $("#datepicker").datepicker();
+        });
+
+        $(".is-favorite").click(function (e) {
+
+            e.preventDefault();
+            let row = $(this).attr('row');
+            let id = $(this).val();
+            let verse = $("#verse_" + row).attr("value");
+            let imageLink = $("#image_" + row).attr("src");
+
+            alert("favorite clicked\n" +
+                "row = " + row + "\n" + 
+                "id = " + $(this).val() + "\n" + 
+                "verse = " + $("#verse_" + row).attr("value") + "\n" +
+                "image link = " + $("#image_" + row).attr("src")
+            );
+
+            $.ajax({
+                url: "/AddFavorite",
+                data: { id: id, verse: verse, imageLink: imageLink },
+                type: "post",
+                dataType: "text",
+                success: function(result) {
+
+                },
+                cache: false,
+                error: function (xhr, status, errorThrown) { },
+                complete: function (xhr, status) { }
+            });
+        });
+    </script>
+}

@@ -1,0 +1,55 @@
+﻿@model VerseModel
+
+@section Styles {
+
+    <style>
+        img {
+            width: 300px;
+        }
+    </style>
+}
+
+@{
+    ViewData["Title"] = "My Favorites";
+}
+
+<br />
+@Html.ActionLink("Home", "Index")
+
+@using(Html.BeginForm())
+{
+    <div class="text-center">
+        <h1 class="display-4">@ViewData["Title"]</h1>
+        @if(Model.verses != null && Model.verses.Count > 0)
+        {
+            <table>
+                <thead>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(Model => Model.verses[0].verseText)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(Model => Model.verses[0].verseImage)
+                        </th>
+                </thead>
+                <tbody>
+                    @foreach(Verse verse in Model.verses)
+                    {
+                        <tr>
+                            <td>
+                                <label>@verse.verseText</label>
+                            </td>
+                            <td>
+                                <img src="@verse.verseImage" />
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+        else
+        {
+            <p>No Favorites Selected.  Select favorites from the Home page.</p>
+        }
+    </div>
+}
