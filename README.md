@@ -4,8 +4,9 @@ This application is designed for Windows to run in Visual Studio 2019
 
 Installation Instructions
 
-Setup the Database (recommended)
+Setup the Database 
 
+(recommended method)
 copy the versefavorites.db to your c: directory
 
 OR from Visual Studio 2019
