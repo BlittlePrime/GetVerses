@@ -13,7 +13,7 @@ From the GetVerses/GetVerses folder where the GetVerses.csproj file resides simp
 (note: if you get the message "It was not possible to find any installed .NET Core SDKs" then you will need to install it from here
  https://dotnet.microsoft.com/download  either 5.0 or 3.1 should work)
 
-Using, Chrome go to localhost:5001
+Using Chrome go to localhost:5001
 
 
 
