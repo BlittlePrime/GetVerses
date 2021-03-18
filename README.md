@@ -43,7 +43,7 @@ Setup the Database
 
 Run the Web Application
 
-	From the command line (recommended)
+	From the command line (recommended method)
 
 		From the GetVerses/GetVerses folder where the GetVerses.csproj file resides simply type "dotnet run"
 
