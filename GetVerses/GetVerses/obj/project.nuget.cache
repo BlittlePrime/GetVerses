@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8681r9RLmmMV9HDjyVPPI/jG5bBzYGC71dMN+dziCy9R0PNn0XEBmK+lZRr2EIetDtkUnM+sUp+4Puzycs2ZsA==",
+  "dgSpecHash": "JfRXEwZhY6+jgn7L44XDerdZ/OvKLZ7+XrNaZzFLR3e10Ximzos/MtPEmHpoCe16JzHUoRM4nKXe9dtk8EmyTQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\blittle\\source\\repos\\nwnltr\\GetVerses\\GetVerses\\GetVerses.csproj",
+  "projectFilePath": "C:\\Users\\blittle\\source\\repos\\GetVersesRepo\\GetVerses\\GetVerses\\GetVerses.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\blittle\\.nuget\\packages\\microsoft.data.sqlite.core\\5.0.4\\microsoft.data.sqlite.core.5.0.4.nupkg.sha512",
     "C:\\Users\\blittle\\.nuget\\packages\\microsoft.dotnet.platformabstractions\\3.1.6\\microsoft.dotnet.platformabstractions.3.1.6.nupkg.sha512",
