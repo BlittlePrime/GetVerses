@@ -21,12 +21,12 @@ Run the Web Application
 From Visual Studio directly
 
 Open the GetVerses.sln in the GetVerses folder into Visual Studio 2019
+Hit F5 or the IIS Express button to run the application
 
 From the command line
 
 // currently in progress
 
-Hit F5 or the IIS Express button to run the application
 
 From IIS
 
