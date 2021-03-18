@@ -1,8 +1,20 @@
 # GetVerses
 
-This application is designed for Windows to run in Visual Studio 2019
+This application is designed for Windows
 
 Installation Instructions
+
+simple version
+
+copy the versefavorites.db to your c: directory
+open the command line
+From the GetVerses/GetVerses folder where the GetVerses.csproj file resides simply type "dotnet run"
+Using Chrome go to localhost:5001
+
+
+
+---
+Long Version
 
 Setup the Database 
 
@@ -16,10 +28,14 @@ Go to Tools->NuGet Package Manager->Package Manager Console
 At the PM> prompt enter these three commands
 
 Install-Package Microsoft.EntityFrameworkCore.Tools
+
 Add-Migration InitialCreate
+
 Update-Database
 
 This will create a SQLLite database file by the name of versefavorites.db on your root C drive which you will need for the application
+
+---
 
 Run the Web Application
 
