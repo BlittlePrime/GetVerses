@@ -56,7 +56,7 @@ Run the Web Application
 
 				open the command line 
 				right click on the command line icon on the taskbar, go to Command Prompt and right click on that and click on Run as an Administrator
-				navigate to where you extracted the folder
+				In the new, elevated command line navigate to where you extracted the folder
 						
 				type "getverses" and enter to run the getverses.bat file.
 
