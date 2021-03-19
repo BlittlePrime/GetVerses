@@ -9,7 +9,7 @@ simple version
 download this project as a zip from the Code button and extract it or clone it
 
 copy the versefavorites.db from the folder to your c: directory
-open the command line and navigate to where you extracted the folder
+open an elevated command line and navigate to where you extracted the folder
 type "getverses" and enter to run the getverses.bat file.  This will load the web server.
 
 (note: if you get the message "It was not possible to find any installed .NET Core SDKs" then you will need to install it from here
