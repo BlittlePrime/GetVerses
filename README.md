@@ -6,14 +6,16 @@ Installation Instructions
 
 simple version
 
-copy the versefavorites.db to your c: directory
-open the command line
-From the GetVerses/GetVerses folder where the GetVerses.csproj file resides simply type "dotnet run"
+download this project as a zip from the Code button and extract it or clone it
+
+copy the versefavorites.db from the folder to your c: directory
+open the command line and navigate to where you extracted the folder
+type "getverses" and enter to run the getverses.bat file.  This will load the web server.
 
 (note: if you get the message "It was not possible to find any installed .NET Core SDKs" then you will need to install it from here
  https://dotnet.microsoft.com/download/dotnet/thank-you/sdk-3.1.407-windows-x64-installer)
 
-Using Chrome go to localhost:5001
+Using Chrome go to https://localhost:5001
 
 
 
@@ -44,8 +46,17 @@ Setup the Database
 Run the Web Application
 
 	From the command line (recommended method)
+	
+		copy the versefavorites.db from the folder to your c: directory
+		open the command line and navigate to where you extracted the folder
+				
+		type "getverses" and enter to run the getverses.bat file.
+
+		OR
 
 		From the GetVerses/GetVerses folder where the GetVerses.csproj file resides simply type "dotnet run"
+		
+		This will load the web server
 
 		(note: if you get the message "It was not possible to find any installed .NET Core SDKs" then you will need to install it from here
 		 https://dotnet.microsoft.com/download  either 5.0 or 3.1 should work)
